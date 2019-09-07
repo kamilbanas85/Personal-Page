@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Kamil Banas personal page</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+        <meta name="viewport" content="width=device-width" />
+
+		 <style>
+			* {
+ 				box-sizing: border-box;
+			}
+
+			body {
+				background-color: dimgray;
+				padding: 20px;
+                position: relative;
+                min-width : 320px
+			}
+
+			.ShortDesription {
+				position: fixed;
+				border-style: solid;
+				float: left;
+				width: 280px;
+				background-color: darkcyan;
+				margin:0 10px;
+			}
+
+			.ShortDesription_top {
+				float: left;
+			}
+
+			#ProfilePicture {
+				width:100%;
+				height: 280px;
+				padding: 10%;
+				border-radius: 50%;
+				margin-bottom: -25px;
+				float: left;		
+			}
+
+			#MiddleContainer {
+                padding: 0;
+				float: left;
+				width: 100%;
+            }
+
+            #NameConteiner {
+                width: 100%;
+				text-align: center;
+				padding: 0%;   
+                margin: -5% 0;
+            }
+
+			#Name {
+				display: inline-block;
+				font-size: 2em;
+			}
+
+			#IconList {
+				display: flex;
+  				justify-content: space-between;	
+				padding: 0 5%;	
+                margin-top: 0%;
+                margin-bottom: 5%;               
+			}
+
+			#IconList div {
+				display: inline-block;
+				width: 30%;
+				text-align: center;
+			}
+
+			.icon {
+				color: black;
+				font-size: 2em;
+			}
+
+			.ShortDesription_bottom {
+				background-color: aliceblue;
+				text-align: center;
+				float: left;
+			}
+
+			.ButtonDownload {
+				color:white;
+				border-radius: 1em;
+				background-color: black;
+				width: 90%;
+				height: 2em;
+				font-size:1.5em;
+				text-align: center;
+			}
+
+            .CV_button {
+                margin: 5% 0;
+            }
+
+            .GIT_button {
+                margin-bottom: 5%;
+            }
+
+			.ButtonDownload a, .GitIcon{
+				color:white;
+                text-decoration: none;
+			}
+
+
+			.MainDespription {
+				border-style: solid;
+				float: left;
+				margin-left: 340px;
+                background-color: white;
+                padding: 0;
+                width: calc(100% - 340px);
+			}
+
+            .NavigationList {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                position: -webkit-sticky; /* Safari */
+                position: sticky;
+                top: 0;
+                height: 2em;
+            }
+
+     
+            
+            .NavigationList li {
+                border-style: solid;
+                border-color: white;
+                display: inline-block;
+                background-color: #333;
+                text-decoration: none;
+                width:33.33%;
+                margin: 0;
+                padding: 0; 
+                float: left;  
+                text-align: center;  
+                height: 2em;                
+            }
+
+            .NavigationList li a {
+                color: white;
+                text-decoration: none;
+                margin: 0;
+                padding: 0; 
+                font-size: 1.2em; 
+                height: 2em;                
+            }
+
+			.PeriodOfTime {
+				float: left;
+				width: 150px;
+
+			}
+
+			.PeriodOfTime span, #PossitonName {
+				font-weight: 700;
+			}
+			
+            #PossitonName {
+				font-size: 1.2em;
+			}
+
+			.Desription {
+				float: left;
+				width: calc(100% - 150px);
+				border-style: solid;
+                margin-bottom: 10px;
+			}
+			
+			.Possiton_item::after {
+				content: "";
+  				clear: both;
+ 				display: table;
+			}
+
+            .ITSkills {
+                display: none;
+            }
+
+
+            .MainCV {
+                padding: 0 10px;
+                margin-bottom: 15px;                
+            }
+
+            .ITSkills, .Conctact{
+                padding: 0 10px;
+            }
+
+            .Intrest {
+                margin-bottom: 0px;                
+            }
+
+            .PeriodOfTime {
+                background-color: cornflowerblue;
+                text-align: center;
+            }
+
+            .Desription {
+                padding: 0 10px;
+                border-style: solid;
+                border-color: cornflowerblue;
+            }
+
+            .Conctact h2 {
+                margin-bottom: -15px;
+            }
+
+            .Conctact h3 {
+                margin-left: 15px;
+            }
+
+            @media screen and (max-width:1000px) {
+                .Desription {
+				    width: 100%;
+			    }
+			}		
+
+			@media screen and (max-width:800px) {
+
+                body {
+                    padding: 5px;
+                }
+
+                .NavigationList {
+                    top: 0;
+                }
+
+  				.ShortDesription {
+                    list-style-type: none;                     
+                    position: relative;
+                    top: 0;                      
+					margin: 0;
+                    padding: 0;
+    				width: 100%;
+					height: 150px;
+					overflow: hidden;
+  				}
+				
+				.ShortDesription_top {
+					width: 70%;
+					height: 100%;
+					overflow: hidden;
+                    padding: 0;
+                    margin: 0;
+                    float: left;
+                }
+
+                #ProfilePictureContainer {
+                    width: 140px;
+                    height: 100%;
+                    float: left;
+                    padding: 0;
+                }
+
+                #MiddleContainer {
+					width: auto;
+					float: none;
+                    height: 100%;
+                    padding: 0;
+                    margin-left: 140px;             
+                }
+
+                #NameConteiner {
+                    padding: 0;   
+                    margin: 0;
+                    width: 100%;
+					height: 50%;
+                    float: left; 
+					text-align: center;
+                }
+
+                #IconList {
+                    padding: 0;
+                    padding-top: 10px; 
+                    margin: 0; 
+                    float: left; 
+                    width: 100%;  
+					height: 50%;
+                }
+
+				.ShortDesription_bottom {
+					width: 30%;
+                    height: 100%;
+					overflow: hidden;
+                    float:right;
+                    padding: 0;
+                    margin: 0;
+                    /* make element inline flex-container */
+                     /* this will make its children flex-items */
+                    display: inline-flex;
+                    /* align-items items in column */
+                    flex-direction: column;
+                    /* center items horizontally */
+                    align-items: center;
+                    /* center items vertically */
+                    justify-content: space-evenly;
+				}
+
+				#ProfilePicture {
+					display: inline-block;
+					height: inherit;
+
+					padding: 5%;
+					border-radius: 50%;
+					margin-bottom: 0;
+				}
+
+
+                .ButtonDownload {
+				    border-radius: 1.6em;
+				    width: 95%;
+				    height: 3.2em;
+				    font-size:1em;
+			    }
+
+                .CV_button {
+                    margin: 0;
+                }
+
+                .GIT_button {
+                    padding-bottom: 0;
+                }
+
+			    .ButtonDownload a, .GitIcon{
+			    	color:white;
+                    text-decoration: none;
+			    }
+
+                .MainDespription {
+                    width: 100%;
+				    margin: 0;
+                    padding: 0;
+			    }
+
+			}
+
+        </style>
+
+
+        <script type="text/javascript">
+            
+            var MainCV = document.getElementsByClassName("MainCV");
+            var ITSkills = document.getElementsByClassName("ITSkills");
+            var Conctact = document.getElementsByClassName("Conctact");
+
+
+            function ChangeContent(input) {
+
+                var MainCV_State = ITSkills_State = Conctact_State = "none";
+
+                switch (input){
+                    case "MainCV":
+                        MainCV_State = "block";
+                        break;
+                    case "ITSkills":
+                        ITSkills_State = "block";
+                        break;
+                    case "Conctact":
+                        Conctact_State = "block";
+                        break;
+                    default:
+                        MainCV_State = "block";
+                }
+            
+                for (i=0; i < MainCV.length; i++) {
+                    MainCV[i].style.display = MainCV_State;
+                }
+                for (i=0; i < ITSkills.length; i++) {
+                    ITSkills[i].style.display = ITSkills_State;
+                }
+                for (i=0; i < Conctact.length; i++) {
+                    Conctact[i].style.display = Conctact_State;
+                 }
+            }
+
+        </script>
+
+
+	</head>
+
+	<body>
+		<div class="ShortDesription">
+
+			<div class="ShortDesription_top">
+                
+                <div id="ProfilePictureContainer">
+                    <img id="ProfilePicture" src="KAMIL_BANAS_picture.jpg">
+                </div>
+
+
+                <div id="MiddleContainer">
+                    <div id="NameConteiner">
+                        <h1 id="Name">
+                             Kamil Banaś
+                       </h1>
+                    </div>
+
+                    <div id="IconList">
+                            <div>  <a href="tel:+48530137514"> 
+                                    <i class="fa fa-phone icon"></i></a>  </div>
+                            <div>  <a href="mailto:kamilbanas85@gmail.com">  
+                                    <i class="fa fa-envelope icon"></i> </a>  </div>
+                            <div>  <a href="skype:kamilbanas85@gmail.com?chat">
+                                  <i class="fa fa-skype icon"></i> </a>  </div>
+                        </div>                     
+                </div>
+
+			</div>
+
+
+			<div class="ShortDesription_bottom">
+				<button class="ButtonDownload CV_button"> 
+					<a href="CV_Kamil_Banas.pdf" download> Download Resume </a> 
+				</button>
+
+				<button class="ButtonDownload GIT_button"> 
+					<a href="https://github.com/kamilbanas85" download>GitHub   <i class="fa fa-github  GitIcon"></i> </a> 
+				</button>
+			</div>
+
+		</div>
+
+		<div class="MainDespription">
+
+                <ul class="NavigationList">
+                    <li id="MainCVID" onclick="ChangeContent('MainCV')"> <a> Main CV </a> </li>
+                    <li id="ITSkillsID" onclick="ChangeContent('ITSkills')"> <a> IT Skills </a> </li>
+                    <li id="ConctactID" onclick="ChangeContent('Conctact')"> <a> Contact</a> </li>
+                </ul>
+    
+  
+                <div class="MainCV WorkExperience">
+                    <h1>
+                        WORK EXPERIENCE
+                    </h1>
+   
+                        <div class="Possiton_item">
+                            <div class="PeriodOfTime"> 
+                                    <p>Jan <span>2019</span> – Aug <span>2019</span> </p> 
+                             </div>
+                            <div class="Desription"> 
+                                    <p id="PossitonName">Senior Numerical Analysis Engineer</p>
+                                    <p id="CompanyName">CIM-mes Projekt Sp. z o.o.</p>
+                                    <p id="Duties">Stress, CFD, Heat Transfer analysis of blast furnace cooling system.</p>
+                            </div>
+                        </div>
+                            
+                        <div class="Possiton_item">
+                                <div class="PeriodOfTime"> 
+                                    <p>Jan <span>2019</span> – Aug <span>2019</span> </p>
+                                </div>
+                                <div class="Desription"> 
+                                    <p id="PossitonName">Analysis Engineer</p> 
+                                    <p id="CompanyName">Stowarzyszenie B-4</p>
+                                    <p id="Duties">Part time job - Remote.</p>
+                                </div>
+                        </div>
+    
+                        <div class="Possiton_item">
+                                <div class="PeriodOfTime"> 
+                                    <p>Jan <span>2019</span> – Aug <span>2019</span> </p>
+                                </div>
+                                <div class="Desription"> 
+                                    <p id="PossitonName">Specialist</p> 
+                                    <p id="CompanyName"></p>Institute of Fluid Flow Machinery Polish Academy of Sciences</p>
+                                    <p id="Duties">Part time job.</p>
+                                </div>
+                        </div>
+    
+                        <div class="Possiton_item">
+                                <div class="PeriodOfTime"> 
+                                    <p>Jan <span>2019</span> – Aug <span>2019</span> </p>
+                                </div>
+                                <div class="Desription"> 
+                                    <p id="PossitonName">Design Engineer (FE Analysis)</p> 
+                                    <p id="CompanyName">Pratt & Whitney Rzeszow S.A. (Rzeszow), Airworthiness Department, Analysis Team</p>
+                                    <p id="Duties">CAE analysis of rotating and stationary parts of turboshaft engines (PZL-10W, GTD-350) and
+                                            turboprop engine (PZL-10S/TWD-10B) related to:
+                                            - checking the influence of dimensional deviations on material effort of engines parts,
+                                            - research and development programs,
+                                            - root cause failure analysis.
+                                            Mainly: static stress analysis, CFD analysis, one way thermal-FSI analysis: conjugate heat transfer
+                                            (CFD) —> stress (Mechanical).
+                                            ANSYS (Mechanical, Fluent, Meshing, Turbogrid, ICEMCFD), MSC (Partan, Marc, Nastran).</p>
+                                </div>
+                        </div>
+    
+                        <div class="Possiton_item">
+                                <div class="PeriodOfTime"> 
+                                    <p>Jan <span>2019</span> – Aug <span>2019</span> </p>
+                                </div>
+                                <div class="Desription"> 
+                                    <p id="PossitonName">Junior Design Engineer (FE Analysis)</p> 
+                                    <p id="CompanyName">Pratt & Whitney Rzeszow S.A. (Rzeszow), Airworthiness Department, Analysis Team</p>
+    
+                                </div>
+                        </div>						
+                    </div>
+    
+                <div class="MainCV Education">
+                    <h1>
+                        EDUCATION
+                    </h1>
+
+                  
+                    <div class="Possiton_item">
+                            <div class="PeriodOfTime"> 
+                                    <p> <span>2018</span> </p> 
+                             </div>
+                            <div class="Desription"> 
+                                    <p id="PossitonName">PhD in Mechanics (Specialization: Heat Transfer)</p>
+                                    <p id="CompanyName">Institute of Fluid Flow Machinery Polish Academy of Sciences</p>
+                                    <p id="Duties">Heat transfer modelling in fluid flow machinery based on thermal-FSI tools.</p>
+                                </div>
+                            </div>
+
+                        <div class="Possiton_item">
+                                <div class="PeriodOfTime"> 
+                                    <p><span>2015</span> </p>
+                                </div>
+                                <div class="Desription"> 
+                                    <p id="PossitonName">Postgraduate in Aircraft Engines</p> 
+                                    <p id="CompanyName">Rzeszow University of Technology</p>
+                                    <p id="Duties">The conceptual design of centrifugal compressor with a pressure ratio of 4.1 and mass
+                                            flow rate  2.9 [kg/s]</p>
+                                </div>
+                        </div>
+                 
+                        <div class="Possiton_item">
+                                <div class="PeriodOfTime"> 
+                                    <p> <span>2012</span> </p>
+                                </div>
+                                <div class="Desription"> 
+                                    <p id="PossitonName">Bachelor of Science in Aeronautics and Space Technology</p> 
+                                    <p id="CompanyName"></p>Rzeszow University of Technology, Specialization: Aircraft</p>
+                                    <p id="Duties">Modelling flow around airfoil with slotted flap with aim to predict lift and drag coefficients (ICEM CFD, Fluent).</p>
+                                </div>
+                        </div>
+
+                        <div class="Possiton_item">
+                                <div class="PeriodOfTime"> 
+                                    <p> <span>2009</span> </p>
+                                </div>
+                                <div class="Desription"> 
+                                    <p id="PossitonName">Master of Science in Mathematics</p> 
+                                    <p id="CompanyName">University of Rzeszow</p>
+                                    <p id="Duties"> </p>
+                                </div>
+                        </div>                   
+    
+                </div>
+    
+                <div class="MainCV Awards">
+                    <h1>
+                        AWARDS
+                    </h1>
+    
+                    <ul>
+                        <li> 2016 – Award of the supervisor (Pratt & Whitney Rzeszow) for heat transfer and
+                            stress analysis of power turbine guide vane of turbine engine PZL–10W. </li>
+                        <li> B.Eng. degree in Aeronautics and Space Technology completed in the group of 5%
+                            best graduates of the University </li>
+                        <li> The final mark for the M.Sc. thesis in mathematics: very good with distinction </li>
+                        <li> Regular scholarships for academic achievements (Mathematics, Aeronautics and Space
+                            Technology) </li>
+                    </ul>
+    
+                </div>
+    
+                <div class="MainCV Intrest">
+                    <h1>
+                        INTREST
+                    </h1>
+    
+                    <ul>
+                        <li> Sport </li>
+                        <li> Aviation </li>
+                    </ul>
+    
+                </div>
+    
+                <div class="ITSkills">
+                        <h1>
+                            IT SKILLS/PROJECTS
+                        </h1>    
+
+                        <p> During Math studies I had firts contact with programming. I learned basic concepts of OOP, based on Java programming lengueage.</p>
+                        <p> Next, when I was studing Aeronautics and Space Technology, I used mainly </p>
+                        <p> After, grauation of Aeronautics and Space Technology, to connecting my two profesions: math and engineering, 
+                            I decided to develop myself in numerical softwre development, wchich is used to simlation of physiscal phenomena, such as heat transfer, fluid flow 
+                            or stress in material.</p>
+                        <p> The most popular CAE softwares were created few years, with old-fasined leangueages, such as Fortran or C.
+                            That's sotware are very complex, therefore, one of the possibilty to extend this is writing user subroutin. 
+                            One of that Fortran subroutine, which extended MSC.Marc sotwere I was written in 2015 during my Phd study at Rzeszow University of
+                            Technology. The soubrouitine was described in the paper:</p>
+                            <a href="https://www.tandfonline.com/doi/full/10.1080/09276440.2015.1048649">K. Banas, Implementation of the nonlinear imperfect transmission conditions between 
+                                dissimilar materials into commercial FEM software MSC.Marc using Fortran user
+                                subroutine: Plane strain case, Composite Interfaces, Vol. 22, No. 6, pp. 447-471.</a> 
+                        <p>In 2015 I chanched thesis of my Phd and Initution and I was I was written next Fortran soubroitne in 2017, 
+                            which extended ANSYS Mechanical software. The sobroutine is avelabel at my GitHub anf it was desribed in paper:</p>
+                            <a href="https://www.tandfonline.com/doi/full/10.1080/09276440.2015.1048649">K. Banas, Implementation of the nonlinear imperfect transmission conditions between 
+                                dissimilar materials into commercial FEM software MSC.Marc using Fortran user
+                                subroutine: Plane strain case, Composite Interfaces, Vol. 22, No. 6, pp. 447-471.</a> 
+                        <p>Then, during my scientific work at Insitute of Fluid flow Machineri PAS I extended GUI of ANSYS MEchanical softwerer. I used XML and Phyton.
+                            The code is avaliable at my GitHub.
+                        </p>
+                        <p>Now, I develop my skills of java.</p>
+                            
+                </div>
+
+                <div class="Conctact">
+                        <h1>
+                            Contact Information:
+                        </h1>
+
+                        <h2>Adress:</h2>
+                        <h3>
+                            Kamil  Banaś <br />               
+                            Spiska 4a/61 St. <br /> 
+                            02-302 Warsaw
+                        </h3>
+                        <h2>Mobile Phone:</h2>
+                        <h3>
+                            (+48) 530 137 514
+                        </h3>
+                        <h2>E-mail:</h2>
+                        <h3>
+                            kamilbanas85@gmail.com
+                        </h3>
+                </div>
+
+
+            </div>
+
+
+	</body>
+	
+</html>
