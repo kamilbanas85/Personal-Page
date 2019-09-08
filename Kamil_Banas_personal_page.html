@@ -156,11 +156,12 @@
 
 			}
 
-			.PeriodOfTime span, #PossitonName {
+			.PeriodOfTime span, #PossitonName, #CompanyName {
 				font-weight: 700;
 			}
 			
             #PossitonName {
+                margin-top: 12px;
 				font-size: 1.2em;
 			}
 
@@ -177,18 +178,15 @@
  				display: table;
 			}
 
-            .ITSkills {
+            .ITSkills, .Conctact {
                 display: none;
+                padding: 10px 10px;
             }
 
 
             .MainCV {
                 padding: 0 10px;
                 margin-bottom: 15px;                
-            }
-
-            .ITSkills, .Conctact{
-                padding: 0 10px;
             }
 
             .Intrest {
@@ -212,6 +210,13 @@
 
             .Conctact h3 {
                 margin-left: 15px;
+            }
+
+            .ITSkills p {
+                text-indent: 2em;
+                padding : 0;
+                margin : 0;
+                line-height : 20px;
             }
 
             @media screen and (max-width:1000px) {
@@ -338,6 +343,57 @@
 			    }
 
 			}
+
+            @media screen and (max-width:520px) {
+                
+                .ShortDesription {
+    				width: 100%;
+					height: auto;
+					overflow: hidden;
+  				}
+
+                .ShortDesription_top {
+					width: 100%;
+                    height: 100px;
+                }
+
+                .ShortDesription_bottom {
+				    width: 100%;
+                    height: 30px;
+                    flex-direction: row;                    
+			    }
+
+                #ProfilePictureContainer {
+                    width: 100px;
+                    height: 100px;
+			    }
+
+                #MiddleContainer {
+                    margin-left: 100px;             
+                }
+
+                .ButtonDownload {
+                    margin: 0;
+				    border-radius: 1em;
+				    width: 45%;
+				    height: 2em;
+				    font-size:0.8em;
+			    }
+
+                #NameConteiner {
+                    margin-top:-10px;
+                }
+
+                #IconList {
+                    margin-top:5px;
+                }
+
+                .MainCV h1{
+                    font-size: 1.6em;
+                }
+
+            }	
+
 
         </style>
 
@@ -467,7 +523,7 @@
                                 </div>
                                 <div class="Desription"> 
                                     <p id="PossitonName">Specialist</p> 
-                                    <p id="CompanyName"></p>Institute of Fluid Flow Machinery Polish Academy of Sciences</p>
+                                    <p id="CompanyName">Institute of Fluid Flow Machinery Polish Academy of Sciences</p>
                                     <p id="Duties">Part time job.</p>
                                 </div>
                         </div>
@@ -479,13 +535,13 @@
                                 <div class="Desription"> 
                                     <p id="PossitonName">Design Engineer (FE Analysis)</p> 
                                     <p id="CompanyName">Pratt & Whitney Rzeszow S.A. (Rzeszow), Airworthiness Department, Analysis Team</p>
-                                    <p id="Duties">CAE analysis of rotating and stationary parts of turboshaft engines (PZL-10W, GTD-350) and
-                                            turboprop engine (PZL-10S/TWD-10B) related to:
-                                            - checking the influence of dimensional deviations on material effort of engines parts,
-                                            - research and development programs,
-                                            - root cause failure analysis.
+                                    <p id="Duties">CAE analysis of a rotating and stationary parts of a turboshaft engines (PZL-10W, GTD-350) and
+                                            turboprop engine (PZL-10S/TWD-10B) related to:</br>                                            
+                                            - checking the influence of dimensional deviations on material effort of engines parts,</br>   
+                                            - research and development programs,</br>   
+                                            - root cause failure analysis.</br>   
                                             Mainly: static stress analysis, CFD analysis, one way thermal-FSI analysis: conjugate heat transfer
-                                            (CFD) —> stress (Mechanical).
+                                            (CFD) —> stress (Mechanical).</br>   
                                             ANSYS (Mechanical, Fluent, Meshing, Turbogrid, ICEMCFD), MSC (Partan, Marc, Nastran).</p>
                                 </div>
                         </div>
@@ -537,7 +593,7 @@
                                 </div>
                                 <div class="Desription"> 
                                     <p id="PossitonName">Bachelor of Science in Aeronautics and Space Technology</p> 
-                                    <p id="CompanyName"></p>Rzeszow University of Technology, Specialization: Aircraft</p>
+                                    <p id="CompanyName">Rzeszow University of Technology, Specialization: Aircraft</p>
                                     <p id="Duties">Modelling flow around airfoil with slotted flap with aim to predict lift and drag coefficients (ICEM CFD, Fluent).</p>
                                 </div>
                         </div>
@@ -589,27 +645,38 @@
                             IT SKILLS/PROJECTS
                         </h1>    
 
-                        <p> During Math studies I had firts contact with programming. I learned basic concepts of OOP, based on Java programming lengueage.</p>
-                        <p> Next, when I was studing Aeronautics and Space Technology, I used mainly </p>
-                        <p> After, grauation of Aeronautics and Space Technology, to connecting my two profesions: math and engineering, 
-                            I decided to develop myself in numerical softwre development, wchich is used to simlation of physiscal phenomena, such as heat transfer, fluid flow 
-                            or stress in material.</p>
-                        <p> The most popular CAE softwares were created few years, with old-fasined leangueages, such as Fortran or C.
-                            That's sotware are very complex, therefore, one of the possibilty to extend this is writing user subroutin. 
-                            One of that Fortran subroutine, which extended MSC.Marc sotwere I was written in 2015 during my Phd study at Rzeszow University of
-                            Technology. The soubrouitine was described in the paper:</p>
-                            <a href="https://www.tandfonline.com/doi/full/10.1080/09276440.2015.1048649">K. Banas, Implementation of the nonlinear imperfect transmission conditions between 
-                                dissimilar materials into commercial FEM software MSC.Marc using Fortran user
-                                subroutine: Plane strain case, Composite Interfaces, Vol. 22, No. 6, pp. 447-471.</a> 
-                        <p>In 2015 I chanched thesis of my Phd and Initution and I was I was written next Fortran soubroitne in 2017, 
-                            which extended ANSYS Mechanical software. The sobroutine is avelabel at my GitHub anf it was desribed in paper:</p>
-                            <a href="https://www.tandfonline.com/doi/full/10.1080/09276440.2015.1048649">K. Banas, Implementation of the nonlinear imperfect transmission conditions between 
-                                dissimilar materials into commercial FEM software MSC.Marc using Fortran user
-                                subroutine: Plane strain case, Composite Interfaces, Vol. 22, No. 6, pp. 447-471.</a> 
-                        <p>Then, during my scientific work at Insitute of Fluid flow Machineri PAS I extended GUI of ANSYS MEchanical softwerer. I used XML and Phyton.
-                            The code is avaliable at my GitHub.
+                        <p> First  contact with programming I had during math studies. I learned basic concepts of OOP based on Java programming language.
+                                Besides classic course in programing we also learned programming some algorithms such as such  brute force or divide-and-conquer.
                         </p>
-                        <p>Now, I develop my skills of java.</p>
+                        <p> After graduation of Aeronautics and Space Technology I decided to develop myself in numerical computer-aided engineering (CAE) 
+                            software development. It was great opportunity to connect my two profesions: math and engineering. 
+                            CAE softwares are used to simulation of physiscal phenomena such as heat transfer, fluid flow or stress in material. 
+                        </p>
+                        <p>
+                            The most popular commercial CAE softwares were written few years ago in old-fashioned leangueages, such as Fortran or C.
+                            Moreover, that's softwares are very complex and any development are limited to writing user subroutine. 
+                            One of the Fortran subroutine, which extended MSC.Marc software  was written by me in 2015 during my Phd study. 
+                            The subroutine was described in the paper:</br>
+                            <a href="https://www.tandfonline.com/doi/full/10.1080/09276440.2015.1048649">K. Banas, 
+                            Implementation of the nonlinear imperfect transmission conditions between dissimilar materials into commercial 
+                            FEM software MSC.Marc using Fortran user subroutine: Plane strain case, Composite Interfaces, Vol. 22, No. 6, pp. 447-471.</a> </br>
+                        </p>
+                        <p>
+                            In 2015, I changed a thesis of my Phd  and I  wrote next Fortran subroutine in 2017, 
+                            which extended ANSYS Mechanical software. The code is available on my GitHub and it was described in the paper:</br>
+                            <a href="https://www.tandfonline.com/eprint/KDUteHUusZCCBUZSYeBC/full">K. Banas and J. Badur, 
+                            Influence of strength differential effect on material effort of a turbine guide vane based on thermoelastoplastic analysis, Journal of Thermal Stresses,
+                            Vol. 40, No. 11, pp. 1368-1385.</a> 
+                        </p>
+                        <p>
+                            Then, during my scientific work at Insitute of Fluid flow Machineri PAS, I extended GUI of ANSYS Thermal software. 
+                            I used XML and Phyton. The code is avaliable on my GitHub. 
+                            The program interpolates data from CFD to thermal mesh and evaluetes heat transfer coefficents based on 3-points method. 
+                            Finally, it sets up boundary conditions in solver input. 
+                        </p>
+                        <p>
+                            Now, I develop my skills in java.
+                        </p>
                             
                 </div>
 
@@ -618,7 +685,7 @@
                             Contact Information:
                         </h1>
 
-                        <h2>Adress:</h2>
+                        <h2>Address:</h2>
                         <h3>
                             Kamil  Banaś <br />               
                             Spiska 4a/61 St. <br /> 
@@ -629,6 +696,10 @@
                             (+48) 530 137 514
                         </h3>
                         <h2>E-mail:</h2>
+                        <h3>
+                            kamilbanas85@gmail.com
+                        </h3>
+                        <h2>Skype:</h2>
                         <h3>
                             kamilbanas85@gmail.com
                         </h3>
